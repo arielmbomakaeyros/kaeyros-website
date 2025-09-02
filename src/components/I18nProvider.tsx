@@ -52,7 +52,7 @@ export default function I18nProvider({ children }: { children: ReactNode }) {
       onError={console.error}
     >
       {children}
-      <div className="fixed right-6 bottom-4 z-[1000] h-fit">
+      <div className="fixed right-[5%] top-8 z-[1000] h-fit">
         <LanguageSwitcher currentLocale={locale} onChange={changeLocale} />
       </div>
     </NextIntlClientProvider>
