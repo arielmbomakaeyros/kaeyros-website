@@ -53,59 +53,6 @@ export function ProductsSection() {
           </div>
 
           <div className="flex items-center justify-center">
-            {/* <div className="relative w-80 h-80"> */}
-              {/* Central SEMA hub */}
-              {/* <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 bg-primary-900 rounded-full flex items-center justify-center">
-                  <span className="text-black font-bold text-sm">sema</span>
-                </div>
-              </div> */}
-              
-              {/* Surrounding service nodes */}
-              {/* {[
-                { icon: "💬", angle: 0 },
-                { icon: "🎯", angle: 45 },
-                { icon: "👥", angle: 90 },
-                { icon: "🏪", angle: 135 },
-                { icon: "📊", angle: 180 },
-                { icon: "✈️", angle: 225 },
-                { icon: "📅", angle: 270 },
-                { icon: "🎲", angle: 315 }
-              ].map((item, index) => {
-                const x = Math.cos((item.angle * Math.PI) / 180) * 120
-                const y = Math.sin((item.angle * Math.PI) / 180) * 120
-                return (
-                  <div
-                    key={index}
-                    className="absolute w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center border-2 border-primary-100"
-                    style={{
-                      left: `calc(50% + ${x}px - 24px)`,
-                      top: `calc(50% + ${y}px - 24px)`,
-                    }}
-                  >
-                    <span className="text-lg">{item.icon}</span>
-                  </div>
-                )
-              })} */}
-              
-              {/* Connection lines */}
-              {/* <div className="absolute inset-0">
-                {[...Array(8)].map((_, index) => {
-                  const angle = index * 45
-                  return (
-                    <div
-                      key={index}
-                      className="absolute w-px h-24 bg-primary-200 origin-bottom"
-                      style={{
-                        left: '50%',
-                        top: '50%',
-                        transform: `rotate(${angle}deg) translateY(-50%)`,
-                      }}
-                    />
-                  )
-                })}
-              </div> */}
-            {/* </div> */}
             <SEMAEcosystem />
           </div>
         </div>

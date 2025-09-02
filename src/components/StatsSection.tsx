@@ -1,16 +1,58 @@
+
+"use client";
+import { FeedbackSvgIcon } from "./custom/SvgLight";
+
 // src/components/stats-section.tsx
 export function StatsSection() {
   return (
-    <section className="py-16 bg-primary-50">
+    <section className="py-16 bg-[#4E6290]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center px-4 py-2 bg-orange-100 rounded-full mb-4">
-            <span className="text-orange-600 text-sm font-medium">📊 Nos Chiffres</span>
+          <div className="inline-block p-[2px] rounded-full bg-[#1E3A8A] mb-4">
+            <div className="flex items-center gap-2 px-6 py-1 rounded-full bg-transparent border-4 border-gradient">
+              <FeedbackSvgIcon />
+              <span className="text-white text-xl font-bold tracking-wide uppercase distressed-text">
+                Nos Chiffres
+              </span>
+            </div>
           </div>
-          <h2 className="text-3xl lg:text-4xl font-bold text-primary-900 mb-4">
+
+          <style jsx>{`
+            .border-gradient {
+              position: relative;
+              z-index: 1;
+            }
+            .border-gradient::before {
+              content: '';
+              position: absolute;
+              top: -4px;
+              left: -4px;
+              right: -4px;
+              bottom: -4px;
+              background: linear-gradient(90deg, #FF4500, #FFA500, #FFD700);
+              border-radius: 9999px;
+              z-index: -1;
+              padding: 4px;
+            }
+            .border-gradient::after {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background: #1E3A8A;
+              border-radius: 9999px;
+              z-index: -1;
+            }
+            .distressed-text {
+              text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), -1px -1px 2px rgba(0, 0, 0, 0.2);
+            }
+          `}</style>
+          <h2 className="text-3xl lg:text-4xl text-white font-bold text-primary-900 mb-4">
             Nos Chiffres Clés
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-white max-w-2xl mx-auto">
             Des données concrètes qui illustrent notre impact, notre croissance et la 
             confiance de nos clients.
           </p>

@@ -17,6 +17,7 @@ import {
   FileText,
   Workflow
 } from 'lucide-react';
+import { AttendanceTrackingSvgIcon, BookingSvgIcon, BulkMessageSvgIcon, ChatbotSvgIcon, DataCollectorSvgIcon, LoyaltyProgramSvgIcon, OrderTakingSvgIcon, PaymentSvgIcon, ReportingSvgIcon, ShopSvgIcon, TicketingSvgIcon, TombolaSvgIcon, TransactionValidationSvgIcon } from './custom/SvgLight';
 
 const SEMAEcosystem = () => {
   const [activeNode, setActiveNode] = useState(null);
@@ -25,96 +26,109 @@ const SEMAEcosystem = () => {
   // Define the services with their icons and positions (13 items)
   const services = [
     { 
-      id: 'messaging', 
-      icon: MessageCircle, 
-      angle: 0, 
-      name: 'Messages',
-      description: 'Gestion des messages WhatsApp'
-    },
-    { 
-      id: 'targeting', 
-      icon: Target, 
-      angle: 27.69, 
-      name: 'Ciblage',
-      description: 'Ciblage intelligent des prospects'
-    },
-    { 
-      id: 'clients', 
-      icon: Users, 
-      angle: 55.38, 
-      name: 'Clients',
-      description: 'Gestion de la clientèle'
-    },
-    { 
-      id: 'shop', 
-      icon: Store, 
-      angle: 83.07, 
-      name: 'Shop',
-      description: 'Boutique en ligne intégrée'
-    },
-    { 
-      id: 'analytics', 
-      icon: BarChart3, 
-      angle: 110.76, 
-      name: 'Analytics',
-      description: 'Analyses et rapports'
-    },
-    { 
-      id: 'travel', 
-      icon: Plane, 
-      angle: 138.45, 
-      name: 'Travel',
-      description: 'Services de voyage'
-    },
-    { 
-      id: 'booking', 
-      icon: Calendar, 
-      angle: 166.14, 
-      name: 'Booking',
-      description: 'Réservations et rendez-vous'
-    },
-    { 
-      id: 'tombola', 
-      icon: Dice1, 
-      angle: 193.83, 
-      name: 'Tombola',
-      description: 'Jeux et concours'
-    },
-    { 
-      id: 'payment', 
-      icon: CreditCard, 
-      angle: 221.52, 
-      name: 'Payment',
-      description: 'Solutions de paiement'
-    },
-    { 
-      id: 'support', 
-      icon: HeadphonesIcon, 
+      id: 'transaction_validation', 
+      // icon: HeadphonesIcon, 
+      icon: <TransactionValidationSvgIcon />, 
       angle: 249.21, 
       name: 'Transaction Validation',
       description: 'Support client 24/7'
     },
     { 
-      id: 'automation', 
-      icon: Zap, 
+      id: 'ticketing', 
+      // icon: Zap, 
+      icon: <TicketingSvgIcon />, 
       angle: 276.9, 
-      name: 'Automation',
+      name: 'Ticketing',
       description: 'Automatisation des processus'
     },
     { 
-      id: 'reports', 
-      icon: FileText, 
+      id: 'chatbots', 
+      // icon: FileText, 
+      icon: <ChatbotSvgIcon />, 
       angle: 304.59, 
-      name: 'Reports',
+      name: 'ChatBot',
       description: 'Rapports détaillés'
     },
     { 
-      id: 'integration', 
-      icon: Workflow, 
+      id: 'loyalty_program', 
+      // icon: Workflow, 
+      icon: <LoyaltyProgramSvgIcon />, 
       angle: 332.28, 
-      name: 'Integration',
+      name: 'Loyalty Program',
       description: 'Intégrations tierces'
-    }
+    },
+    { 
+      id: 'bulk_message', 
+      // icon: MessageCircle, 
+      icon: <BulkMessageSvgIcon />, 
+      angle: 0, 
+      name: 'Bulk Message',
+      description: 'Gestion des messages WhatsApp'
+    },
+    { 
+      id: 'payments', 
+      // icon: Target, 
+      icon: <PaymentSvgIcon />, 
+      angle: 27.69, 
+      name: 'Payment',
+      description: 'Ciblage intelligent des prospects'
+    },
+    { 
+      id: 'attendance_tracking', 
+      // icon: Users, 
+      icon: <AttendanceTrackingSvgIcon />, 
+      angle: 55.38, 
+      name: 'Attendance Tracking',
+      description: 'Gestion de la clientèle'
+    },
+    { 
+      id: 'shop', 
+      // icon: Store, 
+      icon: <ShopSvgIcon />, 
+      angle: 83.07, 
+      name: 'Shop',
+      description: 'Boutique en ligne intégrée'
+    },
+    { 
+      id: 'booking', 
+      // icon: BarChart3, 
+      icon: <BookingSvgIcon />, 
+      angle: 110.76, 
+      name: 'Booking',
+      description: 'Analyses et rapports'
+    },
+    { 
+      id: 'reporting', 
+      // icon: Plane, 
+      icon: <ReportingSvgIcon />, 
+      angle: 138.45, 
+      name: 'Reporting',
+      description: 'Réservations et rendez-vous'
+    },
+    { 
+      id: 'order_taking', 
+      // icon: Calendar, 
+      icon: <OrderTakingSvgIcon />, 
+      angle: 166.14, 
+      name: 'Order Taking',
+      description: 'Rapports et analyses'
+    },
+    { 
+      id: 'tombola', 
+      // icon: Dice1, 
+      icon: <TombolaSvgIcon />, 
+      angle: 193.83, 
+      name: 'Tombola',
+      description: 'Suivi des commandes'
+    },
+    { 
+      id: 'data_collector', 
+      // icon: CreditCard, 
+      icon: <DataCollectorSvgIcon />, 
+      angle: 221.52, 
+      name: 'Data Collector',
+      description: 'Solutions de paiement'
+    },
   ];
 
   const handleNodeClick = (serviceId: any) => {
@@ -228,11 +242,14 @@ const SEMAEcosystem = () => {
                       : 'border-[#3E52BC]/30'
                 }`}
               >
-                <IconComponent 
+                {React.cloneElement(IconComponent, {
+                  color: isActive || isHovered ? '#3E52BC' : '#737373' // dark gray when inactive
+                })}
+                {/* <IconComponent 
                   className={`w-5 h-5 transition-colors duration-300 ${
                     isActive || isHovered ? 'text-[#3E52BC]' : 'text-gray-600'
                   }`} 
-                />
+                /> */}
               </Button>
               
               {/* Tooltip on hover */}
@@ -247,7 +264,9 @@ const SEMAEcosystem = () => {
               {isActive && (
                 <div className="absolute z-20 p-3 bg-white rounded-lg shadow-xl border border-gray-200 whitespace-nowrap -top-16 left-1/2 transform -translate-x-1/2">
                   <div className="flex items-center gap-2 mb-1">
-                    <IconComponent className="w-4 h-4 text-[#3E52BC]" />
+                    {React.cloneElement(IconComponent, {
+                      className: "w-4 h-4 text-[#3E52BC]"
+                    })}
                     <span className="font-semibold text-sm text-gray-900">{service.name}</span>
                   </div>
                   <p className="text-xs text-gray-600 mb-2">{service.description}</p>
