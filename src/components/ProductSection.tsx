@@ -2,16 +2,26 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import { RightArrowSlimSvgIcon, WhoAreWe } from './custom/svg'
+import SEMAEcosystem from './SEMAEcosystem'
 
 export function ProductsSection() {
   return (
-    <section id="products" className="py-16 bg-gray-50">
+    <section id="products" className="py-16 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center px-4 py-2 bg-orange-100 rounded-full mb-4">
+          {/* <div className="inline-flex items-center px-4 py-2 bg-orange-100 rounded-full mb-4">
             <span className="text-orange-600 text-sm font-medium">📦 Nos Produits</span>
-          </div>
-          <h2 className="text-3xl lg:text-4xl font-bold text-primary-900 mb-4">
+          </div> */}
+          <div className="inline-block p-[2px] rounded-full bg-gradient-to-r from-orange-500 via-purple-500 to-blue-700 mb-4">
+            <div className="flex items-center gap-2 px-6 py-1 rounded-full bg-white">
+                {/* Icon here */}
+                <WhoAreWe />
+                <span className="text-2xl font-bold text-black font-[yourCustomFont]">Nos Produits</span>
+            </div>
+        </div>
+          <h2 className="text-3xl text-[#0F2A96] lg:text-4xl font-bold text-primary-900 mb-4">
             L'univers SEMA
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -22,7 +32,7 @@ export function ProductsSection() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-gray-600 text-[20px] leading-relaxed">
               Sema offre un univers digital innovant pour les entreprises africaines, 
               entièrement basé sur WhatsApp. Ses services incluent la gestion client, 
               le ticketing, la tombola, le shop, le pointage, les messages en masse, 
@@ -32,27 +42,27 @@ export function ProductsSection() {
               facilement. Et ce n'est pas tout...
             </p>
             
-            <div className="flex gap-4">
-              <Button  >
+            <div className="flex gap-[2rem] flex-col sm:flex-row ">
+              <Button className="bg-[#FF5F00] text-white cursor-pointer font-bold py-[1.5rem] px-[2rem]" >
                 Explorez l'univers SEMA
               </Button>
-              <Button variant="outline">
-                Demander une démo →
-              </Button>
+              <Link href="/contact" className="text-[#3E52BC] flex items-center cursor-pointer underline underline-offset-10">
+                Demander une démo <RightArrowSlimSvgIcon />
+              </Link>
             </div>
           </div>
 
           <div className="flex items-center justify-center">
-            <div className="relative w-80 h-80">
+            {/* <div className="relative w-80 h-80"> */}
               {/* Central SEMA hub */}
-              <div className="absolute inset-0 flex items-center justify-center">
+              {/* <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-20 h-20 bg-primary-900 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">sema</span>
+                  <span className="text-black font-bold text-sm">sema</span>
                 </div>
-              </div>
+              </div> */}
               
               {/* Surrounding service nodes */}
-              {[
+              {/* {[
                 { icon: "💬", angle: 0 },
                 { icon: "🎯", angle: 45 },
                 { icon: "👥", angle: 90 },
@@ -76,10 +86,10 @@ export function ProductsSection() {
                     <span className="text-lg">{item.icon}</span>
                   </div>
                 )
-              })}
+              })} */}
               
               {/* Connection lines */}
-              <div className="absolute inset-0">
+              {/* <div className="absolute inset-0">
                 {[...Array(8)].map((_, index) => {
                   const angle = index * 45
                   return (
@@ -94,8 +104,9 @@ export function ProductsSection() {
                     />
                   )
                 })}
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
+            <SEMAEcosystem />
           </div>
         </div>
       </div>

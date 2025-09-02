@@ -2,16 +2,17 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Linkedin, MapPin } from 'lucide-react';
 import Image from 'next/image';
+import { LinkedInSvgIcon } from './custom/svg';
 
 const LeadershipSection = () => {
   const leaders = [
     {
       name: "Thierry Monthé",
       role: "Founder / CEO",
-      image: "/about/tm.jpg", // You'll need to add actual images
+      image: "/about/tm.jpg",
       linkedin: "https://www.linkedin.com/in/thierry-month%C3%A9-3a209317a",
       experience: [
-        "+20 years expérience in Data sciences,",
+        "+20 years experience in Data sciences,",
         "software engineering and team management"
       ],
       title: "Data Tech Entrepreneur"
@@ -19,10 +20,10 @@ const LeadershipSection = () => {
     {
       name: "Axel Djouonang", 
       role: "Chief Business Officer",
-      image: "/about/ad.jpg", // You'll need to add actual images
+      image: "/about/ad.jpg",
       linkedin: "www.linkedin.com/in/thierry-month%C3%A9-3a209317a",
       experience: [
-        "+20 years expérience in Finance, project",
+        "+20 years experience in Finance, project",
         "management and business development"
       ],
       title: "Entrepreneur"
@@ -41,11 +42,9 @@ const LeadershipSection = () => {
             {/* Profile Image Section */}
             <div className="flex items-center p-6 gap-6">
               {/* Left side - Image */}
-              <div className="flex-shrink-0 ">
+              <div className="flex-shrink-0">
                 <div className="w-[200px] h-[200px] bg-gray-200 rounded-lg overflow-hidden">
-                  {/* Replace with actual Image component when you have the photos */}
                   <div className="w-[200px] h-[200px] relative bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                    {/* <span className="text-gray-600 text-xs">Photo</span> */}
                     <Image
                       src={leader.image}
                       alt={leader.title}
@@ -57,14 +56,15 @@ const LeadershipSection = () => {
               </div>
 
               {/* Right side - Info */}
-              <div className="flex-1  text-left">
+              <div className="flex-1 text-left">
                 <div className="mb-3">
                   <h4 className="text-2xl font-bold text-[#0F2A96] mb-1">
                     {leader.name}
                   </h4>
                   {/* LinkedIn link */}
                   <div className="flex items-center gap-2 mb-2">
-                    <Linkedin className="w-4 h-4 text-blue-600" />
+                    {/* <Linkedin className="w-4 h-4 text-blue-600" /> */}
+                    <LinkedInSvgIcon />
                     <a 
                       href={`https://${leader.linkedin}`}
                       className="text-blue-600 text-sm hover:underline truncate w-[300px]"
@@ -77,36 +77,33 @@ const LeadershipSection = () => {
                   </div>
                 </div>
 
-                <div className='bg-white rounded-2xl p-4'>
-                    {/* Role badge */}
-                    <div className="inline-flex items-center gap-2 mb-3">
-                        <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-                        <span className="text-orange-600 font-medium text-sm">
-                            {leader.role}
-                        </span>
-                    </div>
+                <div className='bg-white rounded-2xl space-y-3 p-4'>
+                  {/* Role badge */}
+                  <div className="inline-flex items-center gap-2 mb-3">
+                    <CustomBullet />
+                    <span className="text-[#FF5F00] font-medium text-sm">
+                      {leader.role}
+                    </span>
+                  </div>
 
-                    {/* Experience points */}
-                    <div className="space-y-1 mb-3">
-                        <div className="flex items-start gap-2">
-                            <div className="w-3 h-3 bg-orange-500 rounded-full mt-1.5 flex-shrink-0"></div>
-                            <div className="text-sm text-gray-700">
-                            {leader.experience.map((line, idx) => (
-                                <p key={idx}>{line}</p>
-                            ))}
-                            </div>
-                        </div>
+                  {/* Experience points */}
+                  {leader.experience.map((line, idx) => (
+                    <div key={idx} className="flex items-start gap-2">
+                        <CustomBullet />
+                        <p className="text-sm text-gray-700">{line}</p>
                     </div>
+                    ))}
 
-                    {/* Title badge */}
-                    <div className="flex items-center gap-2">
-                        <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-                        <span className="text-sm font-medium text-gray-800">
-                            {leader.title}
-                        </span>
-                    </div>
+
+
+                  {/* Title badge */}
+                  <div className="flex items-center gap-2">
+                    <CustomBullet />
+                    <span className="text-sm font-medium text-gray-800">
+                      {leader.title}
+                    </span>
+                  </div>
                 </div>
-
               </div>
             </div>
           </div>
@@ -121,3 +118,11 @@ const LeadershipSection = () => {
 };
 
 export default LeadershipSection;
+
+const CustomBullet = () => (
+  <div className="relative w-5 h-5 flex-shrink-0">
+    <div className="absolute inset-0 rounded-full border-2 border-gray-700"></div>
+    <div className="absolute top-[4px] left-[4px] w-3 h-3 rounded-full bg-orange-500"></div>
+    <div className="absolute top-[7px] left-[7px] w-1.5 h-1.5 rounded-full bg-gray-700"></div>
+  </div>
+);

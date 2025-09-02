@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
+import { KaeyrosAnalyticsLogoSvgIcon } from './custom/svg'
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -31,19 +32,9 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center">
-            <div className="flex items-center space-x-2">
-              <div className="flex items-center space-x-1">
-                <div className="w-3 h-8 bg-primary-900 rounded-full transform -rotate-45"></div>
-                <div className="w-8 h-3 bg-orange-500 rounded-full transform rotate-45"></div>
-                <div className="w-6 h-3 bg-primary-900 rounded-full"></div>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-primary-900 font-bold text-xl">kaeyros</span>
-                <span className="text-orange-500 text-sm font-medium">ANALYTICS</span>
-              </div>
-            </div>
-          </div>
+          <Link href={'/'} className="flex items-center">
+            <KaeyrosAnalyticsLogoSvgIcon />
+          </Link>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">

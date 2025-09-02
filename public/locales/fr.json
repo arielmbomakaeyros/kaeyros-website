@@ -1,0 +1,19 @@
+{
+    "common": {
+        "loading": "Chargement...",
+        "error": "Une erreur s'est produite.",
+        "notFound": "Page non trouvée"
+    },
+    "home": {
+        "title": "Bienvenue sur notre site",
+        "description": "Nous offrons les meilleures solutions pour vos besoins."
+    },
+    "about": {
+        "title": "À propos de nous",
+        "description": "Nous sommes une entreprise dédiée à fournir des solutions de qualité."
+    },
+    "contact": {
+        "title": "Contactez-nous",
+        "description": "N'hésitez pas à nous contacter pour toute question."
+    }
+}

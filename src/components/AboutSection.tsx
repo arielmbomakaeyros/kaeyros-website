@@ -6,23 +6,26 @@ import { Button } from '@/components/ui/button'
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 import LeadershipSection from './LeadershipSection'
-import { WhoAreWe } from './custom/svg'
+import { WhoAreWe, WomanSmilingSvg } from './custom/svg'
 
 const aboutItems = [
   {
     title: "Notre Histoire",
     content: "Kaeyros Analytics est née de la conviction que les données sont un levier stratégique, capable de transformer les informations en actions concrètes, guidant les acteurs économiques locaux et internationaux vers des décisions éclairées, une croissance durable et un impact significatif sur leurs...",
     image: "/about/first_image.jpg",
+    svgIcon: <WomanSmilingSvg />
   },
   {
     title: "Mission et Vision", 
     content: "Simplifier et automatiser l'accès aux données pour gagner en performance, accompagner la croissance des entreprises et transformer les données en leviers stratégiques durables. Devenir le partenaire technologique de référence en Afrique, valorisant les compétences locales...",
     image: "/about/second_image.jpg",
+    svgIcon: <WomanSmilingSvg />
   },
   {
     title: "Notre Culture & ADN",
     content: "Au cœur de notre ADN, combinent bienveillance et exigence, innovation intuitive, collaboration responsable, performance avec humilité, confiance transparente et ambition réaliste, guidant nos actions pour transformer les idées en résultats concrets et durables, tout en renfor...",
     image: "/about/third_image.jpg",
+    svgIcon: <WomanSmilingSvg />
   }
 ]
 
@@ -33,22 +36,22 @@ export function AboutSection() {
     <section className="py-16 bg-[#FAFAFA]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center px-4 py-2 bg-orange-100 rounded-full mb-4">
-            <span className="text-orange-600 text-sm font-medium flex items-center gap-2">
-                <WhoAreWe />
-                <span>
-                 À propos de nous
-                </span>
-            </span>
+
             {/* <span className="text-orange-600 text-sm font-medium">🏠 À propos de nous</span> */}
-          </div>
-          <h2 className="text-3xl lg:text-4xl font-bold text-[#0F2A96] mb-4">
-            Qui sommes nous
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Nous transformons la data en croissance durable pour les entreprises, 
-            en Afrique et à l'international.
-          </p>
+            <div className="inline-block p-[2px] rounded-full bg-gradient-to-r from-orange-500 via-purple-500 to-blue-700 mb-4">
+                <div className="flex items-center gap-2 px-6 py-1 rounded-full bg-white">
+                    {/* Icon here */}
+                    <WhoAreWe />
+                    <span className="text-2xl font-bold text-black font-[yourCustomFont]">À propos de nous</span>
+                </div>
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#0F2A96] mb-4">
+                Qui sommes nous
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Nous transformons la data en croissance durable pour les entreprises, 
+                en Afrique et à l'international.
+            </p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 mb-8">
@@ -64,6 +67,11 @@ export function AboutSection() {
 
                 {/* Image */}
                 <div className="relative w-full h-[300px]">
+                    {/* { item.svgIcon && (
+                        <div className="w-full bg-amber-300 top-4 left-4">
+                            { item.svgIcon }
+                        </div>
+                    ) } */}
                     <Image
                     src={item.image}
                     alt={item.title}

@@ -1,0 +1,19 @@
+{
+    "common": {
+        "loading": "Loading...",
+        "error": "An error occurred.",
+        "notFound": "Page not found"
+    },
+    "home": {
+        "title": "Welcome to our site",
+        "description": "We offer the best solutions for your needs."
+    },
+    "about": {
+        "title": "About Us",
+        "description": "We are a company dedicated to providing quality solutions."
+    },
+    "contact": {
+        "title": "Contact Us",
+        "description": "Feel free to reach out with any questions."
+    }
+}
