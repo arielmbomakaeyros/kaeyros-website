@@ -3,9 +3,10 @@
 
 import { useUIStore } from '@/store/ui-store'
 import { Button } from '@/components/ui/button'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 import LeadershipSection from './LeadershipSection'
+import { WhoAreWe } from './custom/svg'
 
 const aboutItems = [
   {
@@ -33,7 +34,13 @@ export function AboutSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-4 py-2 bg-orange-100 rounded-full mb-4">
-            <span className="text-orange-600 text-sm font-medium">🏠 À propos de nous</span>
+            <span className="text-orange-600 text-sm font-medium flex items-center gap-2">
+                <WhoAreWe />
+                <span>
+                 À propos de nous
+                </span>
+            </span>
+            {/* <span className="text-orange-600 text-sm font-medium">🏠 À propos de nous</span> */}
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-[#0F2A96] mb-4">
             Qui sommes nous
@@ -65,6 +72,9 @@ export function AboutSection() {
                     />
                 </div>
 
+                
+
+
                 {/* Content */}
                 <div className="p-[2rem]">
                     <p className="text-gray-700 text-sm leading-relaxed line-clamp-5 mb-4">
@@ -74,7 +84,7 @@ export function AboutSection() {
                         variant="link"
                         className="p-0 h-auto font-medium text-[16px] text-[#3772FF] underline underline-offset-10 cursor-pointer hover:underline"
                     >
-                        Voir plus →
+                        Voir plus <ArrowRight className="w-4 h-4 inline-block ml-1" />
                     </Button>
                 </div>
             </div>

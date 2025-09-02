@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Linkedin, MapPin } from 'lucide-react';
+import Image from 'next/image';
 
 const LeadershipSection = () => {
   const leaders = [
@@ -34,23 +35,29 @@ const LeadershipSection = () => {
         Notre leadership
       </h3>
       
-      <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <div className="grid md:grid-cols-2 gap-8 mx-auto">
         {leaders.map((leader, index) => (
           <div key={index} className="bg-[#FFEFE5] rounded-2xl shadow-lg overflow-hidden">
             {/* Profile Image Section */}
             <div className="flex items-center p-6 gap-6">
               {/* Left side - Image */}
-              <div className="flex-shrink-0">
-                <div className="w-32 h-32 bg-gray-200 rounded-lg overflow-hidden">
+              <div className="flex-shrink-0 ">
+                <div className="w-[200px] h-[200px] bg-gray-200 rounded-lg overflow-hidden">
                   {/* Replace with actual Image component when you have the photos */}
-                  <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                    <span className="text-gray-600 text-xs">Photo</span>
+                  <div className="w-[200px] h-[200px] relative bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
+                    {/* <span className="text-gray-600 text-xs">Photo</span> */}
+                    <Image
+                      src={leader.image}
+                      alt={leader.title}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                 </div>
               </div>
 
               {/* Right side - Info */}
-              <div className="flex-1 text-left">
+              <div className="flex-1  text-left">
                 <div className="mb-3">
                   <h4 className="text-2xl font-bold text-[#0F2A96] mb-1">
                     {leader.name}
@@ -60,8 +67,9 @@ const LeadershipSection = () => {
                     <Linkedin className="w-4 h-4 text-blue-600" />
                     <a 
                       href={`https://${leader.linkedin}`}
-                      className="text-blue-600 text-sm hover:underline truncate w-[200px]"
+                      className="text-blue-600 text-sm hover:underline truncate w-[300px]"
                       target="_blank"
+                      title={`LinkedIn profile of ${leader.name}`}
                       rel="noopener noreferrer"
                     >
                       {leader.linkedin}
@@ -105,7 +113,7 @@ const LeadershipSection = () => {
         ))}
       </div>
 
-      <Button className="mt-8 bg-[#0F2A96] hover:bg-[#0F2A96]/90 text-white px-8 py-3 rounded-lg font-medium">
+      <Button className="mt-8 bg-[#FF5F00] text-white cursor-pointer py-[1.5rem] px-[2rem]">
         En savoir plus sur nous
       </Button>
     </div>
