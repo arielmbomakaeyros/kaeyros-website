@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/Header'
 import I18nProvider from '@/components/I18nProvider'
+import { Footer } from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -38,7 +39,10 @@ export default function RootLayout({
         <main className="min-h-screen">
           <I18nProvider>
             <Header />
+            <>
             {children}
+            </>
+            <Footer />
           </I18nProvider>
         </main>
       </body>

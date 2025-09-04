@@ -17,7 +17,7 @@ import {
   FileText,
   Workflow
 } from 'lucide-react';
-import { AttendanceTrackingSvgIcon, BookingSvgIcon, BulkMessageSvgIcon, ChatbotSvgIcon, DataCollectorSvgIcon, LoyaltyProgramSvgIcon, OrderTakingSvgIcon, PaymentSvgIcon, ReportingSvgIcon, ShopSvgIcon, TicketingSvgIcon, TombolaSvgIcon, TransactionValidationSvgIcon } from './custom/SvgLight';
+import { AttendanceTrackingSvgIcon, BookingSvgIcon, BulkMessageSvgIcon, ChatbotSvgIcon, DataCollectorSvgIcon, LoyaltyProgramSvgIcon, OrderTakingSvgIcon, PaymentSvgIcon, ReportingSvgIcon, SemaSvgIcon, ShopSvgIcon, TicketingSvgIcon, TombolaSvgIcon, TransactionValidationSvgIcon } from './custom/SvgLight';
 
 const SEMAEcosystem = () => {
   const [activeNode, setActiveNode] = useState(null);
@@ -197,15 +197,18 @@ const SEMAEcosystem = () => {
         <div className="absolute inset-0 flex items-center justify-center">
           <Button
             onClick={handleCenterClick}
-            className={`w-16 h-16 bg-[#3E52BC] hover:bg-[#3E52BC]/90 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${
-              activeNode === null ? 'ring-4 ring-[#3E52BC]/30 scale-110' : ''
+            className={`w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${
+              // hover:bg-[#3E52BC]/90
+              activeNode === null ? 'ring-4 ring-[#3E52BC]/30 ' : ''
             }`}
           >
             <div className="flex flex-col items-center">
-              <Settings className="w-6 h-6 text-white mb-0.5" />
-              <span className="text-white font-bold text-xs">SEMA</span>
+              {/* <Settings className="w-6 h-6 text-white mb-0.5" /> */}
+              <SemaSvgIcon />
+              {/* <span className="text-white font-bold text-xs">SEMA</span> */}
             </div>
           </Button>
+          {/* <SemaSvgIcon /> */}
         </div>
         
         {/* Service nodes */}

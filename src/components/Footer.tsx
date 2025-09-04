@@ -1,62 +1,73 @@
 // src/components/footer.tsx
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import { KaeyrosAnalyticsLogoSvgIcon } from './custom/svg'
+import { Settings } from 'lucide-react'
+import { FacebookSvgIcon } from './custom/CountrySvg'
 
 export function Footer() {
   return (
-    <footer className="bg-primary-900 text-white py-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-4 gap-8 mb-12">
-          {/* Logo and Description */}
-          <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="flex items-center space-x-1">
-                <div className="w-3 h-8 bg-white rounded-full transform -rotate-45"></div>
-                <div className="w-8 h-3 bg-orange-500 rounded-full transform rotate-45"></div>
-                <div className="w-6 h-3 bg-white rounded-full"></div>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-white font-bold text-xl">kaeyros</span>
-                <span className="text-orange-500 text-sm font-medium">ANALYTICS</span>
-              </div>
+    <footer className="bg-primary-900 bg-[#DFE3F45E]  py-16">
+      <div className="container flex flex-col gap-5 mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div className='flex justify-between w-full  items-center'>
+          <div>
+            <h1 className='text-black font-bold text-[24px]'>We provide data driven solutions!</h1>
+          </div>
+          <div>
+            <Button className='bg-[#3E52BC] px-[2rem] py-[1.5rem] cursor-pointer'>
+              Contactez-nous
+            </Button>
+          </div>
+        </div>
+        <div className=' flex flex-row justify-between'>
+          <div className='w-full'>
+            <div>
+              <KaeyrosAnalyticsLogoSvgIcon />
             </div>
-            <p className="text-gray-300 leading-relaxed max-w-md">
-              Nous transformons vos données en croissance durable pour propulser votre entreprise 
-              vers de nouveaux sommets de performance et d'innovation.
-            </p>
-            <div className="flex space-x-4">
-              <div className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center">
-                <span className="text-xs">📧</span>
-              </div>
-              <div className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center">
-                <span className="text-xs">💼</span>
-              </div>
-              <div className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center">
-                <span className="text-xs">🐦</span>
-              </div>
+            <div>
+              <h1>CAMEROUN: Av du 27 Août Tsinga, Yaoundé</h1>
+              <h2>DEUTSCHLAND: Martin-Schmeißer Weg  10, 44227 Dortmund </h2>
+              <h3>info@kaeyros-analytics.de</h3>
             </div>
           </div>
+          <div className="w-full mx-auto px-6">
+            <div className="grid grid-cols-3 gap-8 text-sm text-gray-700">
+              {/* Left column */}
+              <div className="space-y-4">
+                <a href="#" className="hover:text-blue-900 block">Produits</a>
+                <a href="#" className="hover:text-blue-900 block">Services</a>
+                <a href="#" className="hover:text-blue-900 block">Team</a>
+                <a href="#" className="hover:text-blue-900 block">À propos</a>
+                <a href="#" className="hover:text-blue-900 block">Blog</a>
+                <a href="#" className="hover:text-blue-900 block">Carrière</a>
+              </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-bold text-lg mb-4">Liens Rapides</h4>
-            <ul className="space-y-2">
-              <li><Link href="#about" className="text-gray-300 hover:text-white transition-colors">À propos</Link></li>
-              <li><Link href="#products" className="text-gray-300 hover:text-white transition-colors">Produits</Link></li>
-              <li><Link href="#solutions" className="text-gray-300 hover:text-white transition-colors">Solutions</Link></li>
-              <li><Link href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
-            </ul>
-          </div>
+              {/* Middle column (socials) */}
+              <div className="space-y-4 flex flex-col items-start bg-">
+                <a href="#" className="flex  items-center justify-between gap-3 hover:text-blue-900">
+                  <span className="bg-blue-900 text-white w-7 h-7 flex items-center justify-center rounded">
+                    in
+                  </span>
+                  <span>
+                    LinkedIn
+                  </span>
+                </a>
+                <a href="#" className=" flex items-center justify-between gap-3 hover:text-blue-900">
+                  <span className="bg-blue-900 text-white w-7 h-7 flex items-center justify-center rounded">
+                    F
+                  </span>
+                  <span>
+                    Facebook
+                  </span>
+                </a>
+              </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="font-bold text-lg mb-4">Nos Services</h4>
-            <ul className="space-y-2">
-              <li><span className="text-gray-300">Big Data</span></li>
-              <li><span className="text-gray-300">Intelligence Artificielle</span></li>
-              <li><span className="text-gray-300">Analytics Avancées</span></li>
-              <li><span className="text-gray-300">SEMA Universe</span></li>
-            </ul>
+              {/* Right column (languages) */}
+              <div className="space-y-4 flex flex-col items-end">
+                <a href="#" className="hover:text-blue-900 block">Français</a>
+                <a href="#" className="hover:text-blue-900 block">Anglais</a>
+              </div>
+            </div>
           </div>
         </div>
 

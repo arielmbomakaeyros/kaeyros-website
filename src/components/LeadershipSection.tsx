@@ -119,7 +119,7 @@ const LeadershipSection = () => {
 
 export default LeadershipSection;
 
-const CustomBullet = () => (
+export const CustomBullet = () => (
   <div className="relative w-5 h-5 flex-shrink-0">
     <div className="absolute inset-0 rounded-full border-2 border-gray-700"></div>
     <div className="absolute top-[4px] left-[4px] w-3 h-3 rounded-full bg-orange-500"></div>

@@ -67,11 +67,6 @@ export function AboutSection() {
 
                 {/* Image */}
                 <div className="relative w-full h-[300px]">
-                    {/* { item.svgIcon && (
-                        <div className="w-full bg-amber-300 top-4 left-4">
-                            { item.svgIcon }
-                        </div>
-                    ) } */}
                     <Image
                     src={item.image}
                     alt={item.title}
@@ -79,9 +74,6 @@ export function AboutSection() {
                     className="object-cover"
                     />
                 </div>
-
-                
-
 
                 {/* Content */}
                 <div className="p-[2rem]">
@@ -99,38 +91,6 @@ export function AboutSection() {
 
           ))}
         </div>
-
-        {/* <div className="text-center">
-          <h3 className="text-3xl lg:text-4xl font-bold text-[#0F2A96] mb-8 pt-5">Notre leadership</h3>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-orange-50 rounded-2xl p-6 text-center">
-              <div className="w-20 h-20 bg-gray-300 rounded-full mx-auto mb-4"></div>
-              <h4 className="text-xl font-bold text-primary-900 mb-1">Thierry Monthé</h4>
-              <p className="text-primary-600 mb-2">Founder / CEO</p>
-              <div className="space-y-1 text-sm text-gray-600">
-                <p>+20 years expérience in Data sciences,</p>
-                <p>software engineering and team management</p>
-                <p className="font-medium">Data Tech Entrepreneur</p>
-              </div>
-            </div>
-
-            <div className="bg-orange-50 rounded-2xl p-6 text-center">
-              <div className="w-20 h-20 bg-gray-300 rounded-full mx-auto mb-4"></div>
-              <h4 className="text-xl font-bold text-primary-900 mb-1">Axel Djouonang</h4>
-              <p className="text-primary-600 mb-2">Chief Business Officer</p>
-              <div className="space-y-1 text-sm text-gray-600">
-                <p>+20 years expérience in Finance, project</p>
-                <p>management and business development</p>
-                <p className="font-medium">Entrepreneur</p>
-              </div>
-            </div>
-          </div>
-
-          <Button   className="mt-8">
-            En savoir plus sur nous
-          </Button>
-        </div> */}
         <LeadershipSection />
       </div>
     </section>

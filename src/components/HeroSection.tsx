@@ -35,41 +35,33 @@ export function HeroSection() {
           {/* Right Content - Image with overlays */}
           <div className="relative">
             <div className="relative bg-white rounded-2xl p-8 h-[500px] flex items-center justify-center">
-            {/* <div className="relative bg-gradient-to-br from-orange-100 to-primary-50 rounded-2xl p-8 h-[500px] flex items-center justify-center"> */}
-              {/* Placeholder for the woman image */}
-              {/* <div className="w-64 h-80 bg-gradient-to-b from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
-                <span className="text-white font-medium">Professional Image</span>
-              </div> */}
               <HeroSectionSVG />
-
               {/* Data Overlays */}
-                <div className="absolute top-[40%] left-[-10%] max-w-[300] rounded-2xl shadow-md p-3 bg-white/40 backdrop-blur-sm border border-white/40">
-                    <div className="flex items-center gap-3 mb-3">
-                        {/* Icon placeholder (you can replace with lucide-react icon) */}
-                        <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-[#E8EEFF]">
-                            <span className="text-primary-600 text-xl">%</span>
-                        </div>
-                        <div>
-                            <p className="text-xl font-bold text-gray-900">43.98%</p>
-                            <p className="text-gray-600 text-sm">Croissance des affaires</p>
-                        </div>
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <div className="text-green-600 text-[10px] inline-block">
-                            <span>
-                            ↑ 
-                            </span>
-                            <span>
-                            32.8%
-                            </span>
-                        </div>
-                        <span className="text-gray-500 text-[9px]">
-                            Avec les entreprises utilisant les solutions de Kaeyros
-                        </span>
-                    </div>
-                </div>
-
+              <div className="absolute top-[40%] left-[-10%] max-w-[300] rounded-2xl shadow-md p-3 bg-white/40 backdrop-blur-sm border border-white/40">
+                  <div className="flex items-center gap-3 mb-3">
+                      {/* Icon placeholder (you can replace with lucide-react icon) */}
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-[#E8EEFF]">
+                          <span className="text-primary-600 text-xl">%</span>
+                      </div>
+                      <div>
+                          <p className="text-xl font-bold text-gray-900">43.98%</p>
+                          <p className="text-gray-600 text-sm">Croissance des affaires</p>
+                      </div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                      <div className="text-green-600 text-[10px] inline-block">
+                          <span>
+                          ↑ 
+                          </span>
+                          <span>
+                          32.8%
+                          </span>
+                      </div>
+                      <span className="text-gray-500 text-[9px]">
+                          Avec les entreprises utilisant les solutions de Kaeyros
+                      </span>
+                  </div>
+              </div>
 
               <div className="absolute top-8 left-8 backdrop-blur-2xl bg-transparent rounded-lg  p-4 max-w-xs">
               <DoubleGearSvgIcon />

@@ -1,15 +1,7 @@
 // src/app/page.tsx
-// import { Header } from '@/components/header'
-// import { HeroSection } from '@/components/hero-section'
-// import { AboutSection } from '@/components/about-section'
-// import { ExpertiseSection } from '@/components/expertise-section'
-// import { ProductsSection } from '@/components/products-section'
-// import { SolutionsSection } from '@/components/solutions-section'
-// import { PartnersLogosSection } from '@/components/partners-logos-section'
-// import { StatsSection } from '@/components/stats-section'
-// import { Footer } from '@/components/footer'
 
 import { AboutSection } from "@/components/AboutSection";
+import ActuallitySection from "@/components/ActuallitySection";
 import { ExpertiseSection } from "@/components/ExpertiseSection";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -31,22 +23,8 @@ export default function Home() {
       <SolutionsSection />
       <PartnersLogosSection />
       <StatsSection />
-      <Footer />
+      <ActuallitySection />
+      {/* <Footer /> */}
     </>
   )
 }
-// import Footer from '@/components/custom/layout/Footer';
-// import Header from '@/components/custom/layout/Header';
-// import ExpertiseSection from '@/components/custom/sections/ExpertiseSection';
-// import HeroSection from '@/components/custom/sections/HeroSection';
-
-// export default function Home() {
-//   return (
-//     <main className="min-h-screen">
-//       <Header />
-//       <HeroSection />
-//       <ExpertiseSection />
-//       <Footer />
-//     </main>
-//   );
-// }

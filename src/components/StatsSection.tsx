@@ -1,12 +1,53 @@
-
 "use client";
+import Image from "next/image";
+import {
+  CamerounvgIcon,
+  Country2vgIcon,
+  Country3vgIcon,
+  Country7SvgIcon,
+  GermanySvgIcon,
+  RDCvgIcon,
+  SouthAfricaSvgIcon,
+} from "./custom/CountrySvg";
 import { FeedbackSvgIcon } from "./custom/SvgLight";
 
-// src/components/stats-section.tsx
+const data = [
+  {
+    id: 1,
+    number: "20",
+    label: "Entreprises partenaires",
+    image: "/about/key_numbers/key_numbers1.jpg",
+    secondImages: [],
+  },
+  {
+    id: 2,
+    number: "10+",
+    label: "Solutions digitales",
+    image: "/about/key_numbers/key_numbers2.jpg",
+    secondImages: [],
+  },
+  {
+    id: 3,
+    number: "7",
+    label: "Pays couverts",
+    image: "/about/key_numbers/key_numbers3.jpg",
+    secondImages: [
+      <CamerounvgIcon key="cm" />,
+      <Country2vgIcon key="c2" />,
+      <Country3vgIcon key="c3" />,
+      <RDCvgIcon key="rdc" />,
+      <GermanySvgIcon key="de" />,
+      <SouthAfricaSvgIcon key="za" />,
+      <Country7SvgIcon key="c7" />,
+    ],
+  },
+];
+
 export function StatsSection() {
   return (
     <section className="py-16 bg-[#4E6290]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
         <div className="text-center mb-12">
           <div className="inline-block p-[2px] rounded-full bg-[#1E3A8A] mb-4">
             <div className="flex items-center gap-2 px-6 py-1 rounded-full bg-transparent border-4 border-gradient">
@@ -23,77 +64,372 @@ export function StatsSection() {
               z-index: 1;
             }
             .border-gradient::before {
-              content: '';
+              content: "";
               position: absolute;
               top: -4px;
               left: -4px;
               right: -4px;
               bottom: -4px;
-              background: linear-gradient(90deg, #FF4500, #FFA500, #FFD700);
+              background: linear-gradient(90deg, #ff4500, #ffa500, #ffd700);
               border-radius: 9999px;
               z-index: -1;
-              padding: 4px;
             }
             .border-gradient::after {
-              content: '';
+              content: "";
               position: absolute;
               top: 0;
               left: 0;
               right: 0;
               bottom: 0;
-              background: #1E3A8A;
+              background: #1e3a8a;
               border-radius: 9999px;
               z-index: -1;
             }
             .distressed-text {
-              text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), -1px -1px 2px rgba(0, 0, 0, 0.2);
+              text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2),
+                -1px -1px 2px rgba(0, 0, 0, 0.2);
             }
           `}</style>
-          <h2 className="text-3xl lg:text-4xl text-white font-bold text-primary-900 mb-4">
+
+          <h2 className="text-3xl lg:text-4xl text-white font-bold mb-4">
             Nos Chiffres Clés
           </h2>
           <p className="text-lg text-white max-w-2xl mx-auto">
-            Des données concrètes qui illustrent notre impact, notre croissance et la 
-            confiance de nos clients.
+            Des données concrètes qui illustrent notre impact, notre croissance
+            et la confiance de nos clients.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* Stat 1 */}
-          <div className="bg-white rounded-2xl p-8 text-center shadow-lg">
-            <div className="h-32 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl mb-6 flex items-center justify-center">
-              <span className="text-gray-600 font-medium">Office Team</span>
-            </div>
-            <div className="text-4xl font-bold text-primary-900 mb-2">20</div>
-            <p className="text-gray-600 font-medium">Entreprises partenaires</p>
-          </div>
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-end gap-4 sm:gap-6 md:gap-8">
+          {data.map((item) => (
+            <div
+              key={item.id}
+              className={`bg-white rounded-tl-[100px] rounded-br-[100px] overflow-hidden shadow-lg flex flex-col ${
+                item.id === 1
+                  ? "h-[400px]"
+                  : item.id === 2
+                  ? "h-[450px]"
+                  : "h-[500px]"
+              }`}
+            >
+              {/* Top Image */}
+              <div
+                className={`relative w-full ${
+                  item.id === 1
+                    ? "h-1/2"
+                    : item.id === 2
+                    ? "h-2/3"
+                    : "h-3/4"
+                }`}
+              >
+                <Image
+                  src={item.image}
+                  alt={item.label}
+                  fill
+                  className="object-cover"
+                />
+              </div>
 
-          {/* Stat 2 */}
-          <div className="bg-white rounded-2xl p-8 text-center shadow-lg">
-            <div className="h-32 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-xl mb-6 flex items-center justify-center">
-              <span className="text-yellow-700 font-medium">Happy Team</span>
-            </div>
-            <div className="text-4xl font-bold text-primary-900 mb-2">10+</div>
-            <p className="text-gray-600 font-medium">Solutions digitales</p>
-          </div>
+              {/* Bottom Content */}
+              <div className="flex flex-col items-center justify-center p-6 text-center flex-grow">
+                <div className="text-[100px] font-bold text-gray-900 mb-2">
+                  {item.number}
+                </div>
+                <p className="text-lg text-[#4B5EAA] font-medium">{item.label}</p>
 
-          {/* Stat 3 */}
-          <div className="bg-white rounded-2xl p-8 text-center shadow-lg">
-            <div className="h-32 bg-gradient-to-br from-blue-100 to-purple-200 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-600 opacity-80"></div>
-              <div className="relative z-10 text-white font-medium">Global Network</div>
-              <div className="absolute top-2 right-2 w-4 h-4 bg-white rounded-full opacity-70"></div>
+                {item.secondImages.length > 0 && (
+                  <div className="flex justify-center mt-4 gap-2 flex-wrap">
+                    {item.secondImages.map((icon) => (
+                      <div key={icon.key} className="w-6 h-6">
+                        {icon}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
-            <div className="text-4xl font-bold text-primary-900 mb-2">7</div>
-            <p className="text-gray-600 font-medium">Pays couverts</p>
-            <div className="flex justify-center mt-2 space-x-1">
-              {['🇨🇲', '🇨🇮', '🇸🇳', '🇲🇦', '🇩🇪', '🇳🇱', '🇿🇦'].map((flag, index) => (
-                <span key={index} className="text-sm">{flag}</span>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
+
+// "use client";
+// import Image from "next/image";
+// import {
+//   CamerounvgIcon,
+//   Country2vgIcon,
+//   Country3vgIcon,
+//   Country7SvgIcon,
+//   GermanySvgIcon,
+//   RDCvgIcon,
+//   SouthAfricaSvgIcon,
+// } from "./custom/CountrySvg";
+// import { FeedbackSvgIcon } from "./custom/SvgLight";
+
+// const data = [
+//   {
+//     id: 1,
+//     number: "20",
+//     label: "Entreprises partenaires",
+//     image: "/about/key_numbers/key_numbers1.jpg",
+//     secondImages: [],
+//   },
+//   {
+//     id: 2,
+//     number: "10+",
+//     label: "Solutions digitales",
+//     image: "/about/key_numbers/key_numbers2.jpg",
+//     secondImages: [],
+//   },
+//   {
+//     id: 3,
+//     number: "7",
+//     label: "Pays couverts",
+//     image: "/about/key_numbers/key_numbers3.jpg",
+//     secondImages: [
+//       <CamerounvgIcon key="cm" />,
+//       <Country2vgIcon key="c2" />,
+//       <Country3vgIcon key="c3" />,
+//       <RDCvgIcon key="rdc" />,
+//       <GermanySvgIcon key="de" />,
+//       <SouthAfricaSvgIcon key="za" />,
+//       <Country7SvgIcon key="c7" />,
+//     ],
+//   },
+// ];
+
+// export function StatsSection() {
+//   return (
+//     <section className="py-16 bg-[#4E6290]">
+//       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+//         {/* Section Header */}
+//         <div className="text-center mb-12">
+//           <div className="inline-block p-[2px] rounded-full bg-[#1E3A8A] mb-4">
+//             <div className="flex items-center gap-2 px-6 py-1 rounded-full bg-transparent border-4 border-gradient">
+//               <FeedbackSvgIcon />
+//               <span className="text-white text-xl font-bold tracking-wide uppercase distressed-text">
+//                 Nos Chiffres
+//               </span>
+//             </div>
+//           </div>
+
+//           <style jsx>{`
+//             .border-gradient {
+//               position: relative;
+//               z-index: 1;
+//             }
+//             .border-gradient::before {
+//               content: "";
+//               position: absolute;
+//               top: -4px;
+//               left: -4px;
+//               right: -4px;
+//               bottom: -4px;
+//               background: linear-gradient(90deg, #ff4500, #ffa500, #ffd700);
+//               border-radius: 9999px;
+//               z-index: -1;
+//             }
+//             .border-gradient::after {
+//               content: "";
+//               position: absolute;
+//               top: 0;
+//               left: 0;
+//               right: 0;
+//               bottom: 0;
+//               background: #1e3a8a;
+//               border-radius: 9999px;
+//               z-index: -1;
+//             }
+//             .distressed-text {
+//               text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2),
+//                 -1px -1px 2px rgba(0, 0, 0, 0.2);
+//             }
+//           `}</style>
+
+//           <h2 className="text-3xl lg:text-4xl text-white font-bold mb-4">
+//             Nos Chiffres Clés
+//           </h2>
+//           <p className="text-lg text-white max-w-2xl mx-auto">
+//             Des données concrètes qui illustrent notre impact, notre croissance
+//             et la confiance de nos clients.
+//           </p>
+//         </div>
+
+//         {/* Cards */}
+//         <div className="grid md:grid-cols-3 gap-8">
+//           {data.map((item) => (
+//             <div
+//               key={item.id}
+//               className="bg-white rounded-tl-[100px] rounded-br-[100px] overflow-hidden shadow-lg flex flex-col"
+//             >
+//               {/* Top Image */}
+//               <div className="h-48 w-full relative">
+//                 <Image
+//                   src={item.image}
+//                   alt={item.label}
+//                   fill
+//                   className="object-cover"
+//                 />
+//               </div>
+
+//               {/* Bottom Content */}
+//               <div className="flex flex-col items-center justify-center p-6 text-center flex-grow">
+//                 <div className="text-[100px] font-bold text-gray-900 mb-2">
+//                   {item.number}
+//                 </div>
+//                 <p className="text-gray-600 font-medium">{item.label}</p>
+
+//                 {item.secondImages.length > 0 && (
+//                   <div className="flex justify-center mt-3 gap-2 flex-wrap">
+//                     {item.secondImages.map((icon) => (
+//                       <div key={icon.key} className="w-6 h-6">
+//                         {icon}
+//                       </div>
+//                     ))}
+//                   </div>
+//                 )}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+
+
+// "use client";
+// import { CamerounvgIcon, Country2vgIcon, Country3vgIcon, Country7SvgIcon, GermanySvgIcon, RDCvgIcon, SouthAfricaSvgIcon } from "./custom/CountrySvg";
+// import { FeedbackSvgIcon } from "./custom/SvgLight";
+
+// const data = [
+//   {
+//     id: 1, 
+//     number: "20", 
+//     label: "Entreprises partenaires", 
+//     image: "/public/about/key_numbers/key_numbers1.jpg", 
+//     secondImages: []
+//   }, 
+//   {
+//     id: 2, 
+//     number: "10 +", 
+//     label: "Solutions digitales", 
+//     image: "/public/about/key_numbers/key_numbers1.jpg", 
+//     secondImages: []
+//   }, 
+//   {
+//     id: 3, 
+//     number: "7", 
+//     label: "Pays couverts", 
+//     image: "/public/about/key_numbers/key_numbers1.jpg", 
+//     secondImages: [
+//       <CamerounvgIcon />, 
+//       <Country2vgIcon />, 
+//       <Country3vgIcon />, 
+//       <RDCvgIcon />, 
+//       <GermanySvgIcon />, 
+//       <SouthAfricaSvgIcon />, 
+//       <Country7SvgIcon />, 
+//     ]
+//   }, 
+// ]
+
+// // src/components/stats-section.tsx
+// export function StatsSection() {
+//   return (
+//     <section className="py-16 bg-[#4E6290]">
+//       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+//         <div className="text-center mb-12">
+//           <div className="inline-block p-[2px] rounded-full bg-[#1E3A8A] mb-4">
+//             <div className="flex items-center gap-2 px-6 py-1 rounded-full bg-transparent border-4 border-gradient">
+//               <FeedbackSvgIcon />
+//               <span className="text-white text-xl font-bold tracking-wide uppercase distressed-text">
+//                 Nos Chiffres
+//               </span>
+//             </div>
+//           </div>
+
+//           <style jsx>{`
+//             .border-gradient {
+//               position: relative;
+//               z-index: 1;
+//             }
+//             .border-gradient::before {
+//               content: '';
+//               position: absolute;
+//               top: -4px;
+//               left: -4px;
+//               right: -4px;
+//               bottom: -4px;
+//               background: linear-gradient(90deg, #FF4500, #FFA500, #FFD700);
+//               border-radius: 9999px;
+//               z-index: -1;
+//               padding: 4px;
+//             }
+//             .border-gradient::after {
+//               content: '';
+//               position: absolute;
+//               top: 0;
+//               left: 0;
+//               right: 0;
+//               bottom: 0;
+//               background: #1E3A8A;
+//               border-radius: 9999px;
+//               z-index: -1;
+//             }
+//             .distressed-text {
+//               text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), -1px -1px 2px rgba(0, 0, 0, 0.2);
+//             }
+//           `}</style>
+//           <h2 className="text-3xl lg:text-4xl text-white font-bold text-primary-900 mb-4">
+//             Nos Chiffres Clés
+//           </h2>
+//           <p className="text-lg text-white max-w-2xl mx-auto">
+//             Des données concrètes qui illustrent notre impact, notre croissance et la 
+//             confiance de nos clients.
+//           </p>
+//         </div>
+
+//         <div className="grid md:grid-cols-3 gap-8">
+//           {/* Stat 1 */}
+//           <div className="bg-white rounded-2xl p-8 text-center shadow-lg">
+//             <div className="h-32 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl mb-6 flex items-center justify-center">
+//               <span className="text-gray-600 font-medium">Office Team</span>
+//             </div>
+//             <div className="text-4xl font-bold text-primary-900 mb-2">20</div>
+//             <p className="text-gray-600 font-medium">Entreprises partenaires</p>
+//           </div>
+
+//           {/* Stat 2 */}
+//           <div className="bg-white rounded-2xl p-8 text-center shadow-lg">
+//             <div className="h-32 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-xl mb-6 flex items-center justify-center">
+//               <span className="text-yellow-700 font-medium">Happy Team</span>
+//             </div>
+//             <div className="text-4xl font-bold text-primary-900 mb-2">10+</div>
+//             <p className="text-gray-600 font-medium">Solutions digitales</p>
+//           </div>
+
+//           {/* Stat 3 */}
+//           <div className="bg-white rounded-2xl p-8 text-center shadow-lg">
+//             <div className="h-32 bg-gradient-to-br from-blue-100 to-purple-200 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden">
+//               <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-600 opacity-80"></div>
+//               <div className="relative z-10 text-white font-medium">Global Network</div>
+//               <div className="absolute top-2 right-2 w-4 h-4 bg-white rounded-full opacity-70"></div>
+//             </div>
+//             <div className="text-4xl font-bold text-primary-900 mb-2">7</div>
+//             <p className="text-gray-600 font-medium">Pays couverts</p>
+//             <div className="flex justify-center mt-2 space-x-1">
+//               {['🇨🇲', '🇨🇮', '🇸🇳', '🇲🇦', '🇩🇪', '🇳🇱', '🇿🇦'].map((flag, index) => (
+//                 <span key={index} className="text-sm">{flag}</span>
+//               ))}
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   )
+// }
