@@ -20,7 +20,7 @@ export function ProductsSection() {
           <h2 className="text-[32px] text-[#0F2A96] lg:text-[36px] font-bold text-primary-900 mb-4">
             L'univers SEMA
           </h2>
-          <p className="md:text-[24px] lg:text-[28px] mb-[1rem] text-[18px] lg:text-center text-start text-[#515A82] max-w-2xl lg:mx-auto">
+          <p className="md:text-[16px] lg:text-[18px] mb-[1rem] lg:text-center text-start text-[#515A82] max-w-2xl lg:mx-auto">
             SEMA transforme WhatsApp en moteur de croissance avec ses outils
             intelligents, pour une expérience client fluide.
           </p>
