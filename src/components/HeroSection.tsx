@@ -15,10 +15,10 @@ export function HeroSection() {
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h1 className="text-4xl lg:text-[70px] font-bold text-[#162E66] leading-tight">
+              <h1 className="text-4xl lg:text-[70px] tracking-tighter lg:tracking-[-5px] font-bold text-[#162E66] leading-tight">
                 Nous transformons vos données en croissance durable
               </h1>
-              <p className="text-lg text-[#515A82] leading-relaxed">
+              <p className="text-lg lg:text-[24px] font-medium text-[#515A82] leading-relaxed">
                 De l'information brute à la décision stratégique, nos produits et solutions
                 innovantes transforment vos données en opportunités durables.
               </p>
@@ -39,7 +39,8 @@ export function HeroSection() {
             <div className="relative bg-white rounded-2xl p-8 h-[500px] flex items-center justify-center">
               <HeroSectionSVG />
               {/* Data Overlays */}
-              <div className="absolute top-[40%] left-[-10%] max-w-[300] rounded-2xl shadow-md p-3 bg-white/40 backdrop-blur-sm border border-white/40">
+              <div className="absolute top-[45%] left-[-2%] max-w-[300] rounded-2xl shadow-md p-2 bg-white/75  border border-white/40">
+              {/* backdrop-blur-sm */}
                   <div className="flex items-center gap-3 mb-3">
                       {/* Icon placeholder (you can replace with lucide-react icon) */}
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-[#E8EEFF]">
@@ -59,17 +60,19 @@ export function HeroSection() {
                           32.8%
                           </span>
                       </div>
-                      <span className="text-gray-500 text-[9px]">
+                      <span className="text-gray-500 text-[5px]">
                           Avec les entreprises utilisant les solutions de Kaeyros
                       </span>
                   </div>
               </div>
 
-              <div className="absolute top-8 left-8 backdrop-blur-2xl bg-transparent rounded-lg  p-4 max-w-xs">
+              <div className="absolute top-[25%] left-[10%]  bg-transparent rounded-lg  p-4 max-w-xs">
+                {/* backdrop-blur-2xl */}
               <DoubleGearSvgIcon />
               </div>
 
-              <div className="absolute bottom-12 bg-white/40 backdrop-blur-sm right-[20%] rounded-lg shadow-lg p-3 flex items-center space-x-3">
+              <div className="absolute bottom-12 pr-[3rem] bg-white/75 right-[20%] rounded-lg shadow-lg p-3 flex items-center space-x-3">
+              {/* backdrop-blur-sm */}
                 <div className="w-8 h-8 rounded-full flex items-center justify-center">
                   {/* <span className="text-green-600 font-bold text-sm">24</span> */}
                   <TwentyFourSvgIcon />
@@ -82,9 +85,9 @@ export function HeroSection() {
                 </div>
               </div>
 
-              <div className="absolute bottom-[-10%] right-8 rounded-lg p-3 flex items-center space-x-3">
+              {/* <div className="absolute bottom-[-10%] right-8 rounded-lg p-3 flex items-center space-x-3">
                 <MessageSvgIcon />
-              </div>
+              </div> */}
 
               {/* Chart overlay */}
               <div className="absolute bottom-0 left-[-15%] bg-transparent backdrop-blur-2xl rounded-lg p-4 w-32">

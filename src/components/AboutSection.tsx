@@ -46,12 +46,12 @@ export function AboutSection() {
                 </div>
             </div> */}
             <SmallSectionHeader label='À propos de nous' />
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#0F2A96] mb-4">
+            <h2 className="text-3xl lg:text-4xl tracking-tighter lg:tracking-tight font-bold text-[#0F2A96] mb-4">
                 Qui sommes nous
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Nous transformons la data en croissance durable pour les entreprises, 
-                en Afrique et à l'international.
+            <p className="text-lg text-gray-600 tracking-tighter lg:tracking-tight max-w-2xl mx-auto">
+              Nous transformons la data en croissance durable pour les entreprises, 
+              en Afrique et à l'international.
             </p>
         </div>
 
@@ -63,7 +63,7 @@ export function AboutSection() {
             >
                 {/* Header */}
                 <div className="bg-[#091C6E] p-5 text-white flex items-center justify-end relative">
-                <h3 className="text-xl font-bold text-primary-900">{item.title}</h3>
+                <h3 className="text-[18px] font-bold text-[#FFFFFF] tracking-tighter lg:tracking-tight">{item.title}</h3>
               </div>
 
                 {/* Image */}
@@ -78,7 +78,7 @@ export function AboutSection() {
 
                 {/* Content */}
                 <div className="p-[2rem]">
-                    <p className="text-gray-700 text-sm leading-relaxed line-clamp-5 mb-4">
+                    <p className="text-[#242424] text-sm font-normal leading-relaxed line-clamp-5 mb-4">
                         {item.content}
                     </p>
                     <Button

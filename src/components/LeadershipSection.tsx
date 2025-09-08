@@ -30,8 +30,8 @@ const LeadershipSection = () => {
   ];
 
   return (
-    <div className="text-center px-4 sm:px-6 lg:px-8">
-      <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0F2A96] mb-6 sm:mb-8 pt-5">
+    <div className="text-center px-4 lg:mt-[5rem] sm:px-6 lg:px-8">
+      <h3 className="text-3xl lg:text-4xl tracking-tighter lg:tracking-tight font-bold text-[#0F2A96] mb-4">
         Notre leadership
       </h3>
       
@@ -42,7 +42,7 @@ const LeadershipSection = () => {
             <div className="sm:hidden">
               {/* Mobile Profile Image - Top */}
               <div className="flex justify-center p-4 pb-2">
-                <div className="w-32 h-32 bg-gray-200 rounded-lg overflow-hidden">
+                <div className="w-[350px] h-[300px] bg-gray-200 rounded-lg overflow-hidden">
                   <div className="w-full h-full relative bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
                     <Image
                       src={leader.image}
@@ -55,17 +55,17 @@ const LeadershipSection = () => {
               </div>
 
               {/* Mobile Info Section */}
-              <div className="px-4 pb-4 text-center">
-                <h4 className="text-lg font-bold text-[#0F2A96] mb-2">
+              <div className="px-2 pb-4 text-center">
+                <h4 className="text-[16px] px-[1rem] font-black text-start lg:text-[24px] text-[#111827] mb-2">
                   {leader.name}
                 </h4>
                 
                 {/* LinkedIn link - Mobile */}
-                <div className="flex items-center justify-center gap-2 mb-3">
+                <div className="flex px-2 items-center w-full justify-start gap-2 mb-3">
                   <LinkedInSvgIcon />
                   <a 
                     href={`https://${leader.linkedin}`}
-                    className="text-[#3772FF] text-xs hover:underline truncate max-w-[200px]"
+                    className="text-[#3772FF] text-xs text-start hover:underline truncate max-w-[200px]"
                     target="_blank"
                     title={`LinkedIn profile of ${leader.name}`}
                     rel="noopener noreferrer"
@@ -79,23 +79,23 @@ const LeadershipSection = () => {
                   {/* Role badge */}
                   <div className="flex items-center gap-2 mb-2">
                     <CustomBullet />
-                    <span className="text-[#FF5F00] font-medium text-sm">
+                    <span className="text-[#475569] text-[11px] font-medium text-sm">
                       {leader.role}
                     </span>
                   </div>
 
                   {/* Experience points */}
                   {leader.experience.map((line, idx) => (
-                    <div key={idx} className="flex items-start gap-2">
+                    <div key={idx} className="flex text-[11px] font-medium items-start gap-2">
                       <CustomBullet />
-                      <p className="text-xs text-gray-700 leading-relaxed">{line}</p>
+                      <p className="text-[11px] text-[#475569] font-medium leading-relaxed">{line}</p>
                     </div>
                   ))}
 
                   {/* Title badge */}
                   <div className="flex items-center gap-2">
                     <CustomBullet />
-                    <span className="text-xs font-medium text-gray-800">
+                    <span className="text-[11px] font-medium text-gray-800">
                       {leader.title}
                     </span>
                   </div>
@@ -145,7 +145,7 @@ const LeadershipSection = () => {
                     {/* Role badge */}
                     <div className="inline-flex items-center gap-2 mb-3">
                       <CustomBullet />
-                      <span className="text-[#FF5F00] font-medium text-sm">
+                      <span className="text-[#475569] font-medium text-sm">
                         {leader.role}
                       </span>
                     </div>
@@ -154,14 +154,14 @@ const LeadershipSection = () => {
                     {leader.experience.map((line, idx) => (
                       <div key={idx} className="flex items-start gap-2">
                         <CustomBullet />
-                        <p className="text-sm text-gray-700 text-xs sm:text-sm">{line}</p>
+                        <p className="text-sm text-gray-700 sm:text-sm">{line}</p>
                       </div>
                     ))}
 
                     {/* Title badge */}
                     <div className="flex items-center gap-2">
                       <CustomBullet />
-                      <span className="text-xs sm:text-sm font-medium text-gray-800">
+                      <span className="text-xs sm:text-sm font-medium text-[#475569]">
                         {leader.title}
                       </span>
                     </div>

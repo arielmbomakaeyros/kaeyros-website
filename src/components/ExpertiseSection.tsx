@@ -46,7 +46,7 @@ export function ExpertiseSection() {
           {/* <div className="inline-flex items-center px-4 py-2 bg-orange-100 rounded-full mb-4">
             <span className="text-orange-600 text-sm font-medium">🎯 Nos Expertises</span>
           </div> */}
-          <h2 className="text-3xl lg:text-4xl font-bold text-[#0F2A96] mb-4">
+          <h2 className="text-3xl lg:text-4xl tracking-tighter font-bold text-[#0F2A96] mb-4">
             Nos Expertises
           </h2>
         </div>
@@ -103,13 +103,13 @@ export function ExpertiseSection() {
                         </div>
                       </div>
                       <div className="space-y-6">
-                        <h3 className="text-[20px] md:text-[32px] font-bold text-primary-900">{item.title}</h3>
-                        <p className="text-gray-600 text-[14px] md:text-[20px] leading-relaxed">{item.description}</p>
+                        <h3 className="text-[20px] md:text-[32px] font-bold text-[#1C1C1C] tracking-tighter">{item.title}</h3>
+                        <p className="text-[#515A82] text-[14px] font-light md:text-[20px] leading-relaxed">{item.description}</p>
                         <div className="flex flex-col md:flex-row gap-4">
                           <Button className="bg-[#FF5F00] text-white cursor-pointer md:py-[1.5rem] md:px-[2rem]">
                             Demander une démo
                           </Button>
-                          <Link href="/contact" className="text-[#3E52BC] flex items-center cursor-pointer underline underline-offset-10 truncate">
+                          <Link href="/contact" className="text-[#3772FF] flex items-center cursor-pointer underline underline-offset-10 truncate">
                             Engagez une discussion <RightArrowSlimSvgIcon />
                           </Link>
                         </div>

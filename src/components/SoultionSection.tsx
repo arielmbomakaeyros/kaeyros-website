@@ -35,7 +35,8 @@ const partnerProjects = [
       "Nous avons conçu pour Premium Food une application intelligente qui digitalise la gestion des points de vente, optimise le merchandising, simplifie les commandes et sécurise les livraisons pour booster efficacité et croissance des marques agroalimentaires.",
     image: "/about/our_solutions/solution1.jpg",
     company: "Premium Foods",
-    logo: <PremiumFoodLogoSvg />,
+    // logo: <PremiumFoodLogoSvg />,
+    logo: '/about/our_solutions/solution5.jpg'
   },
   {
     title: "Ease Travel",
@@ -43,7 +44,8 @@ const partnerProjects = [
       "Plateforme digitale complète pour la gestion des voyages et réservations, optimisant l'expérience client et les opérations.",
     image: "/about/our_solutions/solution2.jpg",
     company: "Ease Travel",
-    logo: <EaseSVGIcon />,
+    // logo: <EaseSVGIcon />,
+    logo: '/about/our_solutions/solution6.jpg'
   },
   {
     title: "Bio Labs",
@@ -51,7 +53,8 @@ const partnerProjects = [
       "Solutions d'analyse de données pour laboratoires, automatisant les processus et améliorant la précision des résultats.",
     image: "/about/our_solutions/solution3.jpg",
     company: "Bio Labs",
-    logo: <BiolabSvgIcon />,
+    // logo: <BiolabSvgIcon />,
+    logo: '/about/our_solutions/solution6.png'
   },
   {
     title: "Anti D",
@@ -59,7 +62,8 @@ const partnerProjects = [
       "Solutions d'analyse de données pour laboratoires, automatisant les processus et améliorant la précision des résultats.",
     image: "/about/our_solutions/solution4.jpg",
     company: "Anti D",
-    logo: <EaseSVGIcon />,
+    // logo: <EaseSVGIcon />,
+    logo: '/about/our_solutions/solution7.png'
   },
 ];
 
@@ -74,10 +78,10 @@ export default function SolutionsSection() {
         <div className="text-center mb-8 md:mb-[6rem]">
           
           <SmallSectionHeader label="Nos Solutions" />
-          <h2 className="text-2xl md:text-3xl lg:text-4xl text-[#0F2A96] font-bold text-primary-900 mb-4">
+          <h2 className="text-3xl lg:text-4xl tracking-tighter lg:tracking-tight font-bold text-[#0F2A96] mb-4">
             Nos Partenaires de Croissance
           </h2>
-          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+          <p className="text-lg text-gray-600 tracking-tighter lg:tracking-tight max-w-2xl mx-auto">
             Des entreprises qui innovent et réussissent grâce à notre expertise
             data et nos solutions digitales
           </p>
@@ -187,7 +191,7 @@ export default function SolutionsSection() {
               </button>
             </div>
 
-            <div className="relative bg-white rounded-tl-[100px] rounded-br-[100px] w-full md:w-[60vw] lg:w-[60vw] xl:w-[60vw] md:p-8 lg:p-12 xl:p-[6rem]">
+            <div className="relative bg-white rounded-tl-[100px] rounded-br-[100px] w-full md:w-[60vw] lg:w-[50vw] md:p-8 lg:p-12 xl:p-[6rem]">
 
               <div className="absolute z-50 top-[-5%] left-1/2 transform -translate-x-1/2 flex justify-center mb-12">
                 <div className="flex space-x-2 md:space-x-4 bg-transparent rounded-full p-2">
@@ -221,20 +225,23 @@ export default function SolutionsSection() {
                     {partnerProjects.map((project, index) => (
                       <div key={index} className="w-full flex-shrink-0 px-2 md:px-4">
                         <div className="flex gap-4 md:gap-8 lg:gap-12 items-center justify-end relative">
-                          <div className="absolute bg-white z-50 left-[5%] md:left-[8%] lg:left-[10%] w-[250px] md:w-[300px] lg:w-[400px] space-y-3 md:space-y-4 lg:space-y-6 border-2 p-3 md:p-4 rounded-xl">
-                            <div className="flex items-center space-x-4 mb-4">
-                              {project.logo}
+                          <div className="absolute bg-white z-50 left-[5%] md:left-[8%] lg:left-[10%] w-[250px] md:w-[300px] lg:w-[400px] space-y-3 md:space-y-4 lg:space-y-6 border-2 border-gray-500/10 p-3 md:p-4 rounded-xl">
+                            <div className="z-50 w-[100px] flex items-center mb-1">
+                              <img src={project.logo} className="w-full" alt="" />
+                              {/* {project.logo} */}
                             </div>
-                            <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#162E66]">
+                            <h3 className="text-[18px] md:text-[22px] lg:text-[24px] font-bold text-[#162E66]">
                               {project.title}
                             </h3>
-                            <p className={`text-sm md:text-base text-[#5D699D] leading-relaxed ${
-                              showFull ? '' : 'line-clamp-2'
-                            }`}>
+                            <p className={`text-sm md:text-base font-light text-[#5D699D] `
+                            }>
+                              {/* ${ showFull ? '' : 'line-clamp-2' } */}
+                              {/* leading-relaxed */}
+                              {/* md:text-base */}
                               {project.description}
                             </p>
                             {/* View more / less */}
-                            {project.description?.length > 80 && (
+                            {/* {project.description?.length > 80 && (
                               <button
                                 type="button"
                                 onClick={() => setShowFull((prev) => !prev)}
@@ -242,11 +249,11 @@ export default function SolutionsSection() {
                               >
                                 {showFull ? 'View less' : 'View more'}
                               </button>
-                            )}
+                            )} */}
                           </div>
 
                           <div className="relative">
-                            <div className="h-48 md:h-60 lg:h-80 bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl overflow-hidden">
+                            <div className="h-48 md:h-60 lg:w-[370px] lg:h-[370px] bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl overflow-hidden">
                               
                               {project.image !== "premium-foods" && (
                                 <div className="w-full h-full flex items-center justify-center">

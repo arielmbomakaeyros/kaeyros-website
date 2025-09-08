@@ -20,7 +20,7 @@ export function ProductsSection() {
           <h2 className="text-[32px] text-[#0F2A96] lg:text-[36px] font-bold text-primary-900 mb-4">
             L'univers SEMA
           </h2>
-          <p className="md:text-[16px] lg:text-[18px] mb-[1rem] lg:text-center text-start text-[#515A82] max-w-2xl lg:mx-auto">
+          <p style={{}} className="md:text-[16px] lg:text-[18px] mb-[1rem] tracking-[-1px] lg:text-center text-start text-[#515A82] max-w-2xl lg:mx-auto">
             SEMA transforme WhatsApp en moteur de croissance avec ses outils
             intelligents, pour une expérience client fluide.
           </p>
@@ -28,7 +28,7 @@ export function ProductsSection() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <p className="text-gray-600 text-[14px] lg:text-[20px] leading-relaxed">
+            <p className="text-[#515A82] font-light text-[14px] lg:text-[20px] leading-relaxed">
               Sema offre un univers digital innovant pour les entreprises
               africaines, entièrement basé sur WhatsApp. Ses services incluent
               la gestion client, le ticketing, la tombola, le shop, le pointage,

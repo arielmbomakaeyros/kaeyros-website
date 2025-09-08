@@ -3,7 +3,7 @@ import { WhoAreWe } from "./svg";
 
 const SmallSectionHeader = ({ label }: { label: string }) => {
   return (
-    <div className="inline-block p-[1px] rounded-full bg-gradient-to-r from-orange-500 via-purple-500 to-blue-700 mb-4">
+    <div className="inline-block p-[2px] rounded-full bg-gradient-to-r from-[#FF5E00] to-[#0F2A96] mb-4">
       <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white">
         {/* Icon here */}
         <WhoAreWe />
