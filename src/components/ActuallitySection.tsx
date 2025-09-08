@@ -1,6 +1,7 @@
 import React from 'react'
 import { WhoAreWe } from './custom/svg'
 import Image from 'next/image'
+import SmallSectionHeader from './custom/SmallSectionHeader';
 
 const data = [
   {
@@ -34,13 +35,8 @@ const ActuallitySection = () => {
         <section id="products" className="py-16 bg-white w-full">
             <div className="px-4 sm:px-6 lg:px-8 ">
                 <div className="text-center mb-[5rem]">
-                    <div className="inline-block p-[2px] rounded-full bg-gradient-to-r from-orange-500 via-purple-500 to-blue-700 mb-4">
-                        <div className="flex items-center gap-2 px-6 py-1 rounded-full bg-white">
-                            {/* Icon here */}
-                            <WhoAreWe />
-                            <span className="text-2xl font-bold text-black font-[yourCustomFont]">Blog</span>
-                        </div>
-                    </div>
+                    
+                    <SmallSectionHeader label='Blog' />
                     <h2 className="text-3xl text-[#0F2A96] lg:text-4xl font-bold text-primary-900 mb-4">
                         Nos actualités
                     </h2>

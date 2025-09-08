@@ -7,13 +7,13 @@ import Image from 'next/image'
 
 export function HeroSectionAbout() {
   return (
-    <section className="bg-gradient-to-br mt-[2rem] bg-white py-20 lg:py-24 lg:pt-[150px]">
+    <section className="bg-gradient-to-br mt-[2rem] bg-white pt-20 pb-5 md:py-20 lg:py-24 lg:pt-[150px]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h1 className="text-4xl lg:text-[60px] font-bold text-[#162E66] leading-tight">
+              <h1 className="text-4xl lg:text-[80px] font-bold text-[#162E66] leading-tight">
                 De la donnée à la croissance
               </h1>
               <p className="text-lg text-[#515A82] leading-relaxed">
@@ -21,18 +21,18 @@ export function HeroSectionAbout() {
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button className='bg-[#FF5F00] py-[1.5rem] px-[2rem] text-white cursor-pointer'>
+            <div className="flex flex-row justify-center sm:justify-start sm:flex-row gap-4">
+              <Button className='bg-[#FF5F00] w-1/2 md:w-auto py-[1.5rem] border-[#FF5F00] border-2 px-[2rem] text-white cursor-pointer'>
                 Nos solutions
               </Button>
-              <Button variant="outline" className='text-[#3E52BC] border-1 py-[1.5rem] px-[2rem] border-[#3E52BC] hover:bg-[#3E52BC] hover:text-white cursor-pointer'>
+              <Button variant="outline" className='text-[#3E52BC] w-1/2 md:w-auto border-2 py-[1.5rem] px-[2rem] border-[#3E52BC] hover:bg-[#3E52BC] hover:text-white cursor-pointer'>
                 Nos produits
               </Button>
             </div>
           </div>
 
           {/* Right Content - Image with overlays */}
-            <div className="relative">
+            <div className="relative hidden lg:block">
                 <div className="relative rounded-tl-[100px] rounded-br-[100px] bg-white rounded-2xl p-8 h-[500px] flex items-center justify-center">
                     <div
                         

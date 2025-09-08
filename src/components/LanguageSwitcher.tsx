@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { Globe } from 'lucide-react';
+import { ChevronDown, Globe } from 'lucide-react';
 import { locales } from '@/lib/i18n';
 import {
   DropdownMenu,
@@ -58,7 +58,8 @@ export default function LanguageSwitcher({
             )}
             aria-label="Change language"
           >
-            <Globe className="h-4 w-4 text-gray-600 dark:text-gray-300" />
+            <ChevronDown />
+            {/* <Globe className="h-4 w-4 text-gray-600 dark:text-gray-300" /> */}
           </Button>
         </div>
       </DropdownMenuTrigger>

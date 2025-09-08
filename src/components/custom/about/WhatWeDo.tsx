@@ -1,5 +1,6 @@
 import React from "react";
 import { WhoAreWe } from "../svg";
+import SmallSectionHeader from "../SmallSectionHeader";
 
 const WhatWeDo = () => {
   return (
@@ -7,14 +8,8 @@ const WhatWeDo = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-block p-[2px] rounded-full bg-gradient-to-r from-orange-500 via-purple-500 to-blue-700 mb-4">
-            <div className="flex items-center gap-2 px-6 py-1 rounded-full bg-white">
-              <WhoAreWe />
-              <span className="text-2xl font-bold text-black font-[yourCustomFont]">
-                Nos solutions
-              </span>
-            </div>
-          </div>
+
+          <SmallSectionHeader label="Nos solutions" />
           <h2 className="text-3xl lg:text-4xl font-bold text-[#0F2A96] mb-4">
             Ce que nous faisons
           </h2>

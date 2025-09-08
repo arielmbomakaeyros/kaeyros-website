@@ -49,15 +49,14 @@ export function AboutContactUs() {
     <section className="py-16 bg-[#4E6290]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <p className="text-lg text-white max-w-2xl mx-auto mb">
+        <div className="text-center">
+          <p className="text-lg text-white max-w-2xl mx-auto mb-4">
             Prêt à transformer vos données en leviers stratégiques puissants? 
           </p>
-          <Button className='bg-[#FF5F00] py-[1.5rem] px-[2rem] text-white cursor-pointer'>
-                Contact us
-              </Button>
+          <Button className="bg-[#FF5F00] py-[1.5rem] px-[2rem] text-white cursor-pointer">
+            Contact us
+          </Button>
         </div>
-
       </div>
     </section>
   );

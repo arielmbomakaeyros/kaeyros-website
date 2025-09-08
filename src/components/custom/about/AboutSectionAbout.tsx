@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { WhoAreWe, WomanSmilingSvg } from "../svg";
+import SmallSectionHeader from "../SmallSectionHeader";
 // import LeadershipSection from './LeadershipSection'
 // import { WhoAreWe, WomanSmilingSvg } from './custom/svg'
 
@@ -32,24 +33,18 @@ export function AboutSectionAbout() {
 
   return (
     <section className="py-16 bg-[#FAFAFA]">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+      <div className="container lg:mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center md:mb-12">
           {/* <span className="text-orange-600 text-sm font-medium">🏠 À propos de nous</span> */}
-          <div className="inline-block p-[2px] rounded-full bg-gradient-to-r from-orange-500 via-purple-500 to-blue-700 mb-4">
-            <div className="flex items-center gap-2 px-6 py-1 rounded-full bg-white">
-              {/* Icon here */}
-              <WhoAreWe />
-              <span className="text-2xl font-bold text-black font-[yourCustomFont]">
-                À propos de nous
-              </span>
-            </div>
+          <div className="w-full flex justify-start lg:justify-center">
+          <SmallSectionHeader label="À propos de nous" />
           </div>
-          <h2 className="text-3xl lg:text-4xl font-bold text-[#0F2A96] mb-4">
+          <h2 className="text-start md:text-center text-[32px] lg:text-[36px] font-bold text-[#0F2A96] lg;mb-4">
             Qui sommes nous
           </h2>
         </div>
 
-        <div className="flex flex-row justify-center items-center gap-8 mb-8">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-8 mb-8">
           {aboutItems.map((item, index) => (
             <div
               key={index}

@@ -138,6 +138,7 @@
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  font-family: 'Articulat CF', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;;
 }
 
 /* Custom animations */

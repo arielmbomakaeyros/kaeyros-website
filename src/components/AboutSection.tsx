@@ -7,6 +7,7 @@ import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 import LeadershipSection from './LeadershipSection'
 import { WhoAreWe, WomanSmilingSvg } from './custom/svg'
+import SmallSectionHeader from './custom/SmallSectionHeader'
 
 const aboutItems = [
   {
@@ -24,7 +25,7 @@ const aboutItems = [
   {
     title: "Notre Culture & ADN",
     content: "Au cœur de notre ADN, combinent bienveillance et exigence, innovation intuitive, collaboration responsable, performance avec humilité, confiance transparente et ambition réaliste, guidant nos actions pour transformer les idées en résultats concrets et durables, tout en renfor...",
-    image: "/about/third_image.jpg",
+    image: "/about/fourth_image.png",
     svgIcon: <WomanSmilingSvg />
   }
 ]
@@ -38,13 +39,13 @@ export function AboutSection() {
         <div className="text-center mb-12">
 
             {/* <span className="text-orange-600 text-sm font-medium">🏠 À propos de nous</span> */}
-            <div className="inline-block p-[2px] rounded-full bg-gradient-to-r from-orange-500 via-purple-500 to-blue-700 mb-4">
+            {/* <div className="inline-block p-[2px] rounded-full bg-gradient-to-r from-orange-500 via-purple-500 to-blue-700 mb-4">
                 <div className="flex items-center gap-2 px-6 py-1 rounded-full bg-white">
-                    {/* Icon here */}
                     <WhoAreWe />
                     <span className="text-2xl font-bold text-black font-[yourCustomFont]">À propos de nous</span>
                 </div>
-            </div>
+            </div> */}
+            <SmallSectionHeader label='À propos de nous' />
             <h2 className="text-3xl lg:text-4xl font-bold text-[#0F2A96] mb-4">
                 Qui sommes nous
             </h2>
@@ -58,7 +59,7 @@ export function AboutSection() {
           {aboutItems.map((item, index) => (
             <div
                 key={index}
-                className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden flex flex-col"
+                className="bg-white rounded-xl border border-gray-900 shadow-sm overflow-hidden flex flex-col"
             >
                 {/* Header */}
                 <div className="bg-[#091C6E] p-5 text-white flex items-center justify-end relative">

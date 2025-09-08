@@ -40,7 +40,7 @@ export function ExpertiseSection() {
   const { expertiseCarouselIndex, nextExpertiseCarousel, prevExpertiseCarousel } = useUIStore()
 
   return (
-    <section className="py-16 bg-[#FAFAFA]">
+    <section className="py-[40px] bg-[#FAFAFA]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           {/* <div className="inline-flex items-center px-4 py-2 bg-orange-100 rounded-full mb-4">
@@ -64,9 +64,9 @@ export function ExpertiseSection() {
             </button>
 
             {/* Carousel Content */}
-            <div className="w-full overflow-hidden mx-12">
+            <div className="w-full overflow-hidden mx-0 md:mx-12">
               <div 
-                className="flex transition-transform duration-500 ease-in-out"
+                className="flex  transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${expertiseCarouselIndex * 100}%)` }}
               >
                 {expertiseItems.map((item, index) => (
@@ -103,13 +103,13 @@ export function ExpertiseSection() {
                         </div>
                       </div>
                       <div className="space-y-6">
-                        <h3 className="text-3xl font-bold text-primary-900">{item.title}</h3>
-                        <p className="text-gray-600 leading-relaxed">{item.description}</p>
-                        <div className="flex gap-4">
-                          <Button className="bg-[#FF5F00] text-white cursor-pointer py-[1.5rem] px-[2rem]">
+                        <h3 className="text-[20px] md:text-[32px] font-bold text-primary-900">{item.title}</h3>
+                        <p className="text-gray-600 text-[14px] md:text-[20px] leading-relaxed">{item.description}</p>
+                        <div className="flex flex-col md:flex-row gap-4">
+                          <Button className="bg-[#FF5F00] text-white cursor-pointer md:py-[1.5rem] md:px-[2rem]">
                             Demander une démo
                           </Button>
-                          <Link href="/contact" className="text-[#3E52BC] flex items-center cursor-pointer underline underline-offset-10">
+                          <Link href="/contact" className="text-[#3E52BC] flex items-center cursor-pointer underline underline-offset-10 truncate">
                             Engagez une discussion <RightArrowSlimSvgIcon />
                           </Link>
                         </div>

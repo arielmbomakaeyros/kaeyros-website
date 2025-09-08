@@ -1,5 +1,6 @@
 import React from 'react'
 import { WhoAreWe } from '../svg'
+import SmallSectionHeader from '../SmallSectionHeader'
 
 const OurStory = () => {
   return (
@@ -7,14 +8,15 @@ const OurStory = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-block p-[2px] rounded-full bg-gradient-to-r from-orange-500 via-purple-500 to-blue-700 mb-4">
+          {/* <div className="inline-block p-[2px] rounded-full bg-gradient-to-r from-orange-500 via-purple-500 to-blue-700 mb-4">
             <div className="flex items-center gap-2 px-6 py-1 rounded-full bg-white">
               <WhoAreWe />
               <span className="text-2xl font-bold text-black font-[yourCustomFont]">
                 Nos produits
               </span>
             </div>
-          </div>
+          </div> */}
+          <SmallSectionHeader label="Nos produits" />
           <h2 className="text-3xl lg:text-4xl font-bold text-[#0F2A96] mb-4">
             Notre histoire
           </h2>
@@ -34,7 +36,7 @@ const OurStory = () => {
           </div>
 
           {/* Text Section (narrower) */}
-          <div className="md:flex-[4] w-full text-gray-700 leading-relaxed">
+          <div className="md:flex-[4] text-justify w-full text-gray-700 leading-relaxed">
             <p>
               Kaeyros est née d’une idée simple : les entreprises africaines ne
               disposent pas et n&apos;exploitent pas leurs données. Dans une
@@ -49,7 +51,11 @@ const OurStory = () => {
               Kaeyros a transformé des conversations entre amis en un projet
               concret : bâtir une datatech africaine capable de rivaliser avec
               les standards internationaux tout en restant profondément ancrée
-              dans la réalité locale. Aujourd’hui, Kaeyros incarne l’alliance
+              dans la réalité locale. 
+            </p>
+            <br />
+            <p>
+              Aujourd’hui, Kaeyros incarne l’alliance
               entre innovation et proximité. Chaque solution que nous créons
               répond à un besoin réel du marché et aide nos partenaires à
               transformer leurs données en opportunités stratégiques,
