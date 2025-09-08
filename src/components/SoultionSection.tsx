@@ -112,9 +112,12 @@ export default function SolutionsSection() {
 
           {/* Mobile Project Card */}
           <div className="bg-white rounded-2xl p-6 mx-4">
-            <div className="flex items-center space-x-4 mb-4">
+            {/* <div className="flex items-center space-x-4 mb-4">
               {partnerProjects[partnersCarouselIndex].logo}
-            </div>
+            </div> */}
+            <h3 className="flex items-center space-x-4 mb-4 font-bold text-[#162E66]">
+              {partnerProjects[partnersCarouselIndex].logo}
+            </h3>
             <h3 className="text-xl font-bold text-[#162E66] mb-4">
               {partnerProjects[partnersCarouselIndex].title}
             </h3>
